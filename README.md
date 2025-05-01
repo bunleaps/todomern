@@ -1,35 +1,69 @@
-Create a Backend Application (Continuing from Part 1/Session 7) Using Node.js and Express.js with the Following Specifications (80 Points):
+# Todo MERN Application
 
-    There must be a user sign-in and sign-up feature.
+A full-stack Todo application with user authentication, email verification, and admin features.
 
-    Include features to add, update, and delete users (user management).
+## Features
 
-    Apply middleware concepts to restrict user access to certain features (add, update, delete).
+- User authentication (signup/signin)
+- Email verification with OTP
+- Todo management (CRUD operations)
+- Admin panel for user management
+- Role-based access control
+- API documentation with Swagger
 
-    Create API documentation for the backend application using Swagger JS.
+## Prerequisites
 
+- Node.js (v14 or higher)
+- MongoDB
+- npm or yarn
 
-Bonus Points:
+## Setup Instructions
 
-    After a user signs up for the first time, there is an email verification feature containing an OTP (One-Time Password) or a verification link before the user can sign in to the application (15 Points).
+1. Clone the repository
 
-    Implement middleware for the todo endpoints (/get_all, /add_todo, and /update_todo/:id) (3 Points).
+2. Install dependencies:
+```bash
+npm install
+```
 
-    Deploy the backend application using Docker (2 Points)
+3. Create a `.env` file in the root directory and add the following environment variables:
+```
+PORT=3000
+MONGODB_URI=<your_mongodb_uri>
+JWT_SECRET=<your_jwt_secret>
+```
 
+4. Seed the database with test data:
+```bash
+npm run seed
+```
 
-Notice:
+5. Start the development server:
+```bash
+npm run dev
+```
 
-    Once the backend application is completed, don't forget to perform API testing directly through the API Documentation.
+## Setup Instructions (Docker)
 
-    Take a screenshot of the API testing results from the API Documentation (not from Postman), and include them in the README.md file. Save the README.md file in your backend project folder on the Github Repository.
+1. Clone the repository
 
-    Each screenshot from the API Docs must be accompanied by an explanation.
+2. Create a `.env` file in the root directory and add the following environment variables:
+```
+PORT=5000
+MONGODB_URI=<your_mongodb_uri>
+JWT_SECRET=your_jwt_secret_key
+```
 
-    Send the GitHub repository link via email to juwono@binus.ac.id. Don't forget to include your full name and class in the body of the email.
+3. Build and run the Docker containers:
+```bash
+docker compose up --build
+```
 
-    Once you have completed this assignment, please click the submit button.
+4. In a new terminal, seed the database with test data:
+```bash
+docker compose exec app npm run seed
+```
 
-    The assignment deadline is one week (May 2, 2025 at 23.30 for class B4BC, and May 6, 2025 at 23.30 for class B4CC)
+5. The application should now be running at `localhost:5000`.
 
-    If you submit the assignment after the deadline, there will be a point deduction of -5 points.
+## API Documentation
