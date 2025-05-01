@@ -2,6 +2,8 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import mongoose from "mongoose";
+import swaggerUi from 'swagger-ui-express';
+import { specs } from './swagger.js';
 
 import authRoutes from './routes/authRoutes.js';
 import adminRoutes from './routes/adminRoutes.js';
@@ -41,6 +43,9 @@ app.use('/api/admin', adminRoutes);
 
 // Use todo routes
 app.use('/api/todos', todoRoutes);
+
+// Swagger documentation route
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
 // Start server
 app.listen(PORT, () => {
