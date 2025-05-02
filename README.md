@@ -103,7 +103,7 @@ Retrieve details of a specific user by their username.
 **Endpoint:** `PUT /api/admin/users/:id`
 **Headers:** `Authorization: Bearer <admin_jwt_token>`
 ![update-user-role](./screenshots/admin-edit-user-by-id.png)
-Update the role of a user. Only admin users can perform this action.
+Update the role and other information of a user. Only admin users can perform this action.
 
 #### 4. Delete User by ID
 **Endpoint:** `DELETE /api/admin/users/:id`
