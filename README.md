@@ -77,7 +77,7 @@ This endpoint creates a new user account. Upon successful registration, an OTP i
 
 #### 2. Verify Email
 **Endpoint:** `POST /api/auth/verify-email`
-![verify-email](./screenshots/verify-email.png)
+![verify-email](./screenshots/verify-otp.png)
 Verifies the user's email using the OTP sent during registration. The OTP expires after 10 minutes.
 
 #### 3. Sign In
